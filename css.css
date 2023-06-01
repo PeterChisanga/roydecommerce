@@ -1,0 +1,19 @@
+.header {
+    background: radial-gradient(#ffd500, #f0dada);
+    color: #ffb700;
+    background-color: #f0c813;
+}
+
+.btn {
+    display: inline-block;
+    background: #f1a731;
+    color: white;
+    padding: 10px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background-color: #f7d917;
+}
