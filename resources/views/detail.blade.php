@@ -47,8 +47,8 @@
   </div>
 </div>
 
-<h2 class="title">Similar Products</h2>
-<div class="small-container">
+<h2 >Similar Products</h2>
+<!-- <div class="small-container">
   <div class="row">
     @foreach ($products as $item)
     <div class="col-4">
@@ -64,9 +64,32 @@
         <i class="fa fa-star-half"></i>
         <i class="fa fa-star-o"></i>
       </div>
-      <h4>{{$item['price']}} Dh</h4>
+      <h4>K {{$item['price']}}</h4>
     </div>
     @endforeach
+  </div>
+</div> -->
+
+<div class="small-container">
+  <div class="row custom-row">
+      @foreach ($products as $item)
+          <div class="col-4">
+              <a class="col-4-a" href="/detail/{{$item['id']}}">
+                  <div class="img-div">
+                    <img src="{{ asset('images/products/'.$item->gallery) }}" alt="">
+                  </div>
+                  <h4>{{$item['name']}}</h4>
+                  <div class="rating">
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star-half" ></i>
+                      <i class="fa fa-star-o" ></i>
+                  </div>
+                  <h4 >K {{$item['price']}}</h4>
+              </a>
+          </div>
+      @endforeach
   </div>
 </div>
 

@@ -15,7 +15,7 @@
 <h2>Our Products</h2>
 @endif
 
-<div class="small-container">
+<!-- <div class="small-container">
     <div class="row custom-row">
         @foreach ($products as $item)
             <div class="col-4">
@@ -34,6 +34,29 @@
             </div>
         @endforeach
     </div>
+</div> -->
+
+<div class="small-container">
+  <div class="row custom-row">
+      @foreach ($products as $item)
+          <div class="col-4">
+              <a class="col-4-a" href="/detail/{{$item['id']}}">
+                  <div class="img-div">
+                    <img src="{{ asset('images/products/'.$item->gallery) }}" alt="">
+                  </div>
+                  <h4>{{$item['name']}}</h4>
+                  <div class="rating">
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star" ></i>
+                      <i class="fa fa-star-half" ></i>
+                      <i class="fa fa-star-o" ></i>
+                  </div>
+                  <h4 >K {{$item['price']}}</h4>
+              </a>
+          </div>
+      @endforeach
+  </div>
 </div>
 
 @endsection

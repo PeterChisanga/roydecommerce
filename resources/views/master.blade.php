@@ -38,10 +38,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  /* height: 100vh;
+  width: 100vw;
+   overflow-x: hidden; */
 }
 
 .navbar {
@@ -49,10 +53,7 @@ body {
   align-items: center;
   padding: 0px 20px;
   margin-bottom:0px;
-         background-color: #f7d917;
-
-
-
+  background-color: #f7d917;
 }
 
 .navbar .logo img {
@@ -173,9 +174,10 @@ h2 {
   text-align: center;
   color: #000;
   background-color: #FFD700;
-  padding: 20px;
-  margin: 30px 0;
+  padding: 5px;
+  margin: 3px 0;
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 
@@ -274,18 +276,42 @@ h2 {
 .col-4 {
   flex-basis: 20%;
   padding: 3px;
-  min-width: 200px;
-  margin:15px 15px 50px 15px;
+  min-width: 210px;
+  margin:15px 15px 10px 15px;
   transition: transform 0.5s;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
+    background-color: rgb(244, 239, 239);
+    border-radius:10px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.col-4 .col-4-a{
+  background-color:white;
 }
 
-.col-4 img {
-  width: 100%;
-  height:auto;
-  object-fit: cover;
+.img-div{
+  height:340px;
+  overflow: hidden;
+  display: flex;           /* Added these lines */
+  justify-content: center; /* to center the image vertically */
+  align-items: center;     /* and horizontally */
+  background-color: white;
+
 }
+
+.col-4 a h4,.col-4 a .rating{
+  padding-left:10px;
+}
+
+.img-div img {
+  width:100%;
+  height:100%;
+  object-fit: contain; /* changed from cover to contain */
+}
+
+
+
 
 .title {
   text-align: center;
@@ -619,7 +645,7 @@ form a {
 
 @media only screen and (min-width: 1580px) {
   .col-4{
-    height: 600px;
+    height: 450px;
   }
 }
 
@@ -686,6 +712,9 @@ form a {
 
   .col-2{
     margin-bottom:10px;
+    padding-bottom:0px;
+    margin:0px;
+     min-width: 90px;
   }
 
   .col-2 img {
@@ -700,15 +729,37 @@ form a {
   }
 
   .col-2,
-  .col-3,
-  .col-4 {
+  .col-3 {
     flex-basis: 100%;
   }
 
+  .small-container {
+    padding:0px;
+    width: 100%;
+  }
+
+  .custom-row{
+    margin:0px;
+  }
+
   .col-4{
-    height: 590px;
+    height: 270px;
+    /* width:auto; */
+    /* width: 60px;
+    height:auto; */
+     min-width: 110px;
     margin-bottom: 0px;
     padding-bottom:.5px;
+    flex-basis: 40%;
+  }
+
+  .col-4 a h4,.col-4 a .rating{
+    font-size:12px;
+  }
+
+  .img-div{
+    height:180px;
+
   }
 
   .single-product .row {

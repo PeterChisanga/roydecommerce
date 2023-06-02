@@ -94,8 +94,10 @@
   <div class="row custom-row">
       @foreach ($products as $item)
           <div class="col-4">
-              <a href="detail/{{$item['id']}}">
-                  <img src="{{ asset('images/products/'.$item->gallery) }}" alt="">
+              <a class="col-4-a" href="detail/{{$item['id']}}">
+                  <div class="img-div">
+                    <img src="{{ asset('images/products/'.$item->gallery) }}" alt="">
+                  </div>
                   <h4>{{$item['name']}}</h4>
                   <div class="rating">
                       <i class="fa fa-star" ></i>

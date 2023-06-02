@@ -1,6 +1,8 @@
 .footer {
+    box-sizing: border-box;
     background-color: #1c1c1c;
     color: #fff;
+    margin-top: 70px;
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
@@ -49,4 +51,29 @@
 
 .bottom-bar a:hover {
     color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .footer h3 {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    .footer p {
+        font-size: 14px;
+        padding-left: 0px;
+    }
+
+    .footer ul li a i {
+        font-size: 20px;
+    }
+
+    .bottom-bar p {
+        font-size: 12px;
+    }
+
+    .row {
+        width: 100%;
+        margin: 0;
+    }
 }
