@@ -59,7 +59,7 @@ class AdminController extends Controller
     }
 
     function createAccount(Request $req){
-        $allowed_emails = ['peterchisangamwamba@gmail.com', 'peterchisangamwamba@yahoo.com','contact@petermwamba.com','royd@samalasuppliers.com','francis@samalasuppliers.com','lilian@samalasuppliers.com','luckson@samalasuppliers.com'];
+        $allowed_emails = ['peterchisangamwamba@gmail.com','contact@petermwamba.com','royd@samalasuppliers.com','francis@samalasuppliers.com','lilian@samalasuppliers.com','luckson@samalasuppliers.com'];
         if(!in_array($req->email, $allowed_emails)){
             return redirect('/');
         }
